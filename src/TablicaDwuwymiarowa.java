@@ -10,7 +10,7 @@ o parzystych indeksach wierszy do sumy liczb leżących w komórkach tablicy
 o nieparzystych indeksach kolumn. Wykorzystaj klasę Random.
 */
 public class TablicaDwuwymiarowa {
-    static void tworzenieTablicy()
+    static int[][] tworzenieTablicy()
     {
         Random rnd = new Random();
         int rozmiar= rnd.nextInt(11)+10;
@@ -57,6 +57,27 @@ public class TablicaDwuwymiarowa {
              }
              System.out.println();
          }
+         return tablica;
+    }
+    static void stosunekiczb(int [][]tablica)
+    {
+        int sumaP=0;
+        int sumaNP=0;
+        for(int i=0;i<tablica.length;i++)
+        {
+            for(int j=0;j<tablica.length;j++)
+            {
+                if(j%2==0)
+                {
+                    sumaP+=tablica[i][j];
+                }
+                if(i%2==1)
+                {
+                    sumaNP+=tablica[i][j];
+                }
+            }
+        }
+        System.out.println("Stosunek sumy liczb lezacych w komorkach tablicy o parzystych indeksach wierszy\n do sumy liczb lezacych w komorkach tablicy o nieparzystych indeksach kolumn wynosi: "+ (double)sumaP/sumaNP);
     }
 
 }
