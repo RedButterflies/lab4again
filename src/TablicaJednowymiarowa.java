@@ -18,7 +18,7 @@ całkowitych, a następnie wyświetli zawartość w sposób następujący:
 Liczby 0 – 9 wyświetlaj jako dwucyfrowe (dodaj 0 na początku). Dodatkowo metoda
 ma obliczać średnią wartość w każdej kolumnie i wyświetlać ją w dodatkowym
 wierszu – odpowiednio pod odpowiadającą jej kolumną.*/
-public class TablicaJEdnowymiarowa {
+public class TablicaJednowymiarowa {
     static int [] utworzTablice()
     {
         int [] tablica= new int [100];
